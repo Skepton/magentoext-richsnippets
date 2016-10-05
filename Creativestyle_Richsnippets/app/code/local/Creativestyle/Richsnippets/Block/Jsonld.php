@@ -84,10 +84,7 @@ class Creativestyle_Richsnippets_Block_Jsonld extends Mage_Core_Block_Template
                             'datePublished' => str_replace('/', '-', $datePublished[0]),
                             'name' => $this->htmlEscape($r->getTitle()),
                             'reviewBody' => nl2br($this->escapeHtml($r->getDetail())),
-                            'reviewRating' => array(
-                                '@type'       => 'Rating',
-                                'ratingValue' => $avg
-                            )
+                            'reviewRating' => $avg
                         );
                     }
                 }
